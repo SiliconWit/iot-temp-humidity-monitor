@@ -24,3 +24,8 @@ The current implementation of the IoT temperature and humidity monitoring system
 
 By working on these areas of improvement, contributors can help enhance the project's functionality and expand its potential applications, making it more valuable and appealing to a broader audience.
 
+
+## Improvement 
+
+* We improved the original program to the current 'PROJECT.py' and 'proj_plot.py'
+* For the arduino code we added a LCD and HC-06 bluetooth module
