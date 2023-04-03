@@ -2,6 +2,16 @@
 
 An IoT-based temperature and humidity monitoring system using Arduino, DHT11 sensor, and Python for data analysis. This beginner-friendly project is perfect for students looking to explore the Internet of Things and data visualization. This repository is based on https://siliconwit.com/iot/temperature-and-humidity-monitoring-system 
 
+## Project Schematic
+
+This folder contains a Fritzing files that represent how the various components are connected to the arduino. The project currently implements an arduino uno but an arduino mega could be used if more sensors were to be included to provide more functionalities.
+
+* _color coding for fritzing files:_
+        black: represents connection to individual arduino pins.
+        green: represents connection to ground.
+        red: represents connection to voltage supply (5V), if a connection is made to the 3.3V source be sure to state that explicitly in the documentation.
+        Maintain this format when adding more components to make it easy to understand.
+
 ## Areas of Improvement
 
 The current implementation of the IoT temperature and humidity monitoring system serves as a foundation for a beginner-friendly project. However, there are several areas where contributors can improve the project, making it more versatile and feature-rich:
