@@ -16,6 +16,14 @@ This folder contains a Fritzing files that represent how the various components 
 
 This folder contains PCB designs for the circuit connection
 
+## Arduino code
+
+This folder contains Arduino code for the project.
+The arduino connection contains : Arduino Uno, Liquid Crystal Display(LCD) , DHT Sensor , buzzer , RGB LED and current limiting resistors
+
+* The arduino code programs the DHT sensor to read the temperature and humidity values from the environment and display the data on the serial monitor and on the LCD.
+* The RGB LED and the buzzer are for alerts when the temperature or humidity values reach a certain set values
+
 ## Areas of Improvement
 
 The current implementation of the IoT temperature and humidity monitoring system serves as a foundation for a beginner-friendly project. However, there are several areas where contributors can improve the project, making it more versatile and feature-rich:
