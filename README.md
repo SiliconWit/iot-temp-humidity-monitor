@@ -1,6 +1,6 @@
 # IoT-Based Temperature and Humidity Monitoring System
 
-An IoT-based temperature and humidity monitoring system using Arduino, DHT11 sensor, and Python for data analysis. This beginner-friendly project is perfect for students looking to explore the Internet of Things and data visualization. This repository is based on https://siliconwit.com/iot/temperature-and-humidity-monitoring-system 
+An IoT-based temperature and humidity monitoring system using Arduino, DHT11 sensor, and Python for data analysis. This beginner-friendly project is perfect for students looking to explore the Internet of Things and data visualization. This repository is based on <https://siliconwit.com/iot/temperature-and-humidity-monitoring-system>
 
 ## Project Schematic
 
@@ -11,6 +11,10 @@ This folder contains a Fritzing files that represent how the various components 
         green: represents connection to ground.
         red: represents connection to voltage supply (5V), if a connection is made to the 3.3V source be sure to state that explicitly in the documentation.
         Maintain this format when adding more components to make it easy to understand.
+
+## PCB-design
+
+This folder contains PCB designs for the circuit connection
 
 ## Areas of Improvement
 
@@ -34,8 +38,7 @@ The current implementation of the IoT temperature and humidity monitoring system
 
 By working on these areas of improvement, contributors can help enhance the project's functionality and expand its potential applications, making it more valuable and appealing to a broader audience.
 
-
-## Improvement 
+## Improvement
 
 * We improved the original program to the current 'PROJECT.py' and 'proj_plot.py'
 * For the arduino code we added a LCD and HC-06 bluetooth module
