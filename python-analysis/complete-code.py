@@ -15,6 +15,10 @@ hum = []
 tem = []
 fac = []
 pattern = re.compile(r'-?\d+\.?\d*')
+'''
+This line of code compiles a the regular expression pattern and returns a regular expression object
+that can be used to match patterns in a string.
+'''
 PATH = r'data_analysis.csv'  # file path to .csv file
 fieldnames = ['Humidity', 'Temperature']  # csv header lines
 
@@ -43,6 +47,7 @@ def generate_time():
     return fac
 
 
+
 # plots a live graph from the extracted data
 
 def plot_live_graph():
@@ -55,10 +60,18 @@ def plot_live_graph():
   :return: None
   """
     try:
+        '''
+        try-except block of function allows us to handle exceptions or errors that may occure during the excecution rather than letting the program to crush.  
+        '''
         ser = serial.Serial('COM5', 9600)  # Replace 'COM#' with the appropriate port number
         if len(fac) == 0:
             print('reading data ...')
         line = ser.readline().decode('utf-8').strip()
+        '''
+        The ser.readline().decode('utf-8').strip() line of code commonly used with devices such as microcontrollers, sensors and other hardware devices that
+        uses serial communication. ser.readline() reads the data from the serial and is decoded using the 'utf-8', a commonly used encoding that can represent
+        a wide range characters.
+        '''
         s = [float(s) for s in pattern.findall(line)]
         hum.append(s[0])
         tem.append(s[1])
