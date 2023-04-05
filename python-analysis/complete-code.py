@@ -50,7 +50,7 @@ def generate_time():
 
 # plots a live graph from the extracted data
 
-def plot_live_graph():
+def plot_live_graph(i):
     """
     reads data from arduino via serial communication and writes to a csvfile to store the data,
     also stores the plotting values for humidity and temperature as floats, for every call
