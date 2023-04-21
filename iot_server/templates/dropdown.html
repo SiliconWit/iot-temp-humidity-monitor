@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TempHumidTracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            background-size: auto;
+        }
+        p {
+          color: #f8f9fa;
+          font-size: large;
+          font-family:Arial, Helvetica, sans-serif;
+        }
+
+        h1,h2,h3,h4{
+          color: cyan;
+        }
+
+        h5{
+          color: #f5f5f5;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .dropdown-menu {
+            background-color: #f8f9fa;
+            border: none;
+            box-shadow: 0 3px 12px rgba(0,0,0,.175);
+            font-size: 1rem;
+            padding: .5rem 0;
+            text-align: center;
+            width: 200px;
+        }
+        .dropdown-item {
+            color: #343a40;
+            font-weight: 400;
+            transition: all .2s ease-in-out;
+        }
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #d9e2ec;
+            color: #343a40;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: .5rem 1rem;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #0069d9;
+            border-color: #0062cc;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .iframes-wrapper{
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        iframe{
+          width: 49%;
+        }
+
+        header{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 20px 100px;
+          background: #2196F3;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 99;
+        }
+
+        .logo{
+          font-size: 2em;
+          color: #fff;
+          user-select: none;
+        }
+
+        .navigation a{
+          position: relative;
+          font-size: 1.1em;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+          margin-left: 40px;
+        }
+
+        .navigation a::after{
+          content: ' ';
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          width: 100%;
+          height: 3px;
+          background: #fff;
+          border-radius: 5px;
+          transform-origin: right;
+          transform:scaleX(0);
+          transition: transform.5s;
+        }
+
+        .navigation a:hover::after{
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+
+    </style>
+</head>
+<body style="background-image: url('image.jpg');">
+  <header>
+    <h2 class="logo">TempHumidTracker</h2>
+    <nav class="navigation">
+          <a href="{{url_for('index')}}">Home</a>
+          <a href="about.pdf" download>About</a>
+          <a href="https://wa.me/254796324279">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section style="text-align: center;">
+			<h1>Discover Your Climate</h1>
+			<p>Track temperature and humidity data for any date.</p>
+		</section>
+    <section style="text-align: center;">
+        <h3>Track temperature and humidity data for any date.</h3>
+        <ul style="list-style-type: none;">
+          <li>
+            <h5>Accurate Data</h5>
+          </li>
+          <li>
+            <h5>Easy to Use</h5>
+          </li>
+          <li>
+            <h5>Customizable</h5>
+          </li>
+        </ul>
+		</section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form method="GET" action="/update">
+            <select name="date" class="form-control" onchange="this.form.submit()">
+              <option disabled selected>Select a date</option>
+              {% for date in dates %}
+              <option value="{{ date }}">{{ date }}</option>
+              {% endfor %}
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="iframes-wrapper">
+      <iframe width="600" height="300" src="https://www.youtube.com/embed/SGHRz8wpj3E" title="Why Does Humidity Make It Feel Hotter?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="600" height="300" src="https://www.youtube.com/embed/Y-2-QN5iKS4" title="What affects Temperature?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
